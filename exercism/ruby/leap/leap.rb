@@ -13,5 +13,5 @@ class Year
 end
 
 module BookKeeping
-  VERSION = 7b0949e
+  VERSION = 2
 end
