@@ -32,17 +32,14 @@ class YearTest < Minitest::Test
   end
 
   def test_standard_eighteenth_century
-    skip
     refute Year.leap?(1800), "Expected 'false', 1800 is not a leap year."
   end
 
   def test_leap_twenty_fourth_century
-    skip
     assert Year.leap?(2400), "Expected 'true', 2400 is a leap year."
   end
 
   def test_leap_y2k
-    skip
     assert Year.leap?(2000), "Expected 'true', 2000 is a leap year."
   end
   # Problems in exercism evolve over time, as we find better ways to ask
@@ -62,7 +59,6 @@ class YearTest < Minitest::Test
   # If you are curious, read more about constants on RubyDoc:
   # http://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/constants.html
   def test_bookkeeping
-    skip
     assert_equal 2, BookKeeping::VERSION
   end
 end
