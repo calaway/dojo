@@ -28,7 +28,6 @@ class YearTest < Minitest::Test
   end
 
   def test_standard_nineteenth_century
-    skip
     refute Year.leap?(1900), "Expected 'false', 1900 is not a leap year."
   end
 
