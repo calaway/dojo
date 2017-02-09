@@ -1,5 +1,9 @@
 class Year
   def self.leap?(year)
-    "Expected 'true', 1996 is a leap year."
+    if year % 4 == 0
+      true
+    else
+      false
+    end
   end
 end

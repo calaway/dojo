@@ -20,7 +20,6 @@ class YearTest < Minitest::Test
   end
 
   def test_standard_and_odd_year
-    skip
     refute Year.leap?(1997), "Expected 'false', 1997 is not a leap year."
   end
 
