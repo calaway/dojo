@@ -16,7 +16,6 @@ end
 
 class YearTest < Minitest::Test
   def test_leap_year
-    # skip
     assert Year.leap?(1996), "Expected 'true', 1996 is a leap year."
   end
 
