@@ -1,13 +1,10 @@
 class Raindrops
   def self.convert(number)
-    if number % 3 == 0
-      "Pling"
-    elsif number % 5 == 0
-      "Plang"
-    elsif number % 7 == 0
-      "Plong"
-    else
-      number.to_s
-    end
+    raindrop_speak = ""
+    raindrop_speak += "Pling" if number % 3 == 0
+    raindrop_speak += "Plang" if number % 5 == 0
+    raindrop_speak += "Plong" if number % 7 == 0
+    raindrop_speak += number.to_s if raindrop_speak == ""
+    raindrop_speak
   end
 end
