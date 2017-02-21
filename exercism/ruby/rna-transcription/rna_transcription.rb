@@ -1,5 +1,5 @@
 class Complement
   def self.of_dna(dna)
-    "G"
+    dna.tr("CG", "GC")
   end
 end
