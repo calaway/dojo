@@ -1,5 +1,5 @@
 class Complement
   def self.of_dna(dna)
-    dna.tr("CGT", "GCA")
+    dna.tr("ACGT", "UGCA")
   end
 end
