@@ -4,3 +4,7 @@ class Complement
     dna.tr("GCTA", "CGAU")
   end
 end
+
+module BookKeeping
+  VERSION = 4
+end
