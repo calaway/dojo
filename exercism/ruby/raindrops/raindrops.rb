@@ -4,6 +4,8 @@ class Raindrops
       "Pling"
     elsif number % 5 == 0
       "Plang"
+    elsif number % 7 == 0
+      "Plong"
     else
       number.to_s
     end
