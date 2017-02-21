@@ -2,6 +2,8 @@ class Raindrops
   def self.convert(number)
     if number % 3 == 0
       "Pling"
+    elsif number % 5 == 0
+      "Plang"
     else
       number.to_s
     end
