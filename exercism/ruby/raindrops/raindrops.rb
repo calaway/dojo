@@ -8,3 +8,7 @@ class Raindrops
     raindrop_speak
   end
 end
+
+module BookKeeping
+  VERSION = 3
+end
