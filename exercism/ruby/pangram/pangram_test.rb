@@ -55,7 +55,6 @@ class PangramTest < Minitest::Test
   end
 
   def test_upper_and_lower_case_versions_of_the_same_character_should_not_be_counted_separately
-    skip
     phrase = 'the quick brown fox jumped over the lazy FOX'
     result = Pangram.pangram?(phrase)
     refute result, "Expected false, got: #{result.inspect}. #{phrase.inspect} is NOT a pangram"
@@ -78,7 +77,6 @@ class PangramTest < Minitest::Test
   # If you are curious, read more about constants on RubyDoc:
   # http://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/constants.html
   def test_bookkeeping
-    skip
     assert_equal 4, BookKeeping::VERSION
   end
 end
