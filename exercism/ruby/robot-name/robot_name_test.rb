@@ -43,7 +43,6 @@ class RobotTest < Minitest::Test
   end
 
   def test_different_name_when_chosen_name_is_taken
-    skip
     Kernel.srand SAME_INITIAL_ROBOT_NAME_SEED
     name1 = Robot.new.name
     Kernel.srand SAME_INITIAL_ROBOT_NAME_SEED
@@ -52,7 +51,6 @@ class RobotTest < Minitest::Test
   end
 
   def test_version
-    skip
     assert_equal 2, BookKeeping::VERSION
   end
 end

@@ -4,10 +4,15 @@ class Robot
   ALPHABET = [*"A".."Z"]
 
   def initialize
-    @name = generate_name
+    reset
   end
 
   def generate_name
-    ALPHABET[rand(26)] + ALPHABET[rand(26)] + rand(1000).to_s
+    srand
+    (ALPHABET[rand(26)] * 2) + ((rand(10).to_s) * 3)
+  end
+
+  def reset
+    @name = generate_name
   end
 end
