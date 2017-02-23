@@ -19,42 +19,36 @@ class PangramTest < Minitest::Test
   end
 
   def test_missing_character_x
-    skip
     phrase = 'a quick movement of the enemy will jeopardize five gunboats'
     result = Pangram.pangram?(phrase)
     refute result, "Expected false, got: #{result.inspect}. #{phrase.inspect} is NOT a pangram"
   end
 
   def test_another_missing_character_x
-    skip
     phrase = 'the quick brown fish jumps over the lazy dog'
     result = Pangram.pangram?(phrase)
     refute result, "Expected false, got: #{result.inspect}. #{phrase.inspect} is NOT a pangram"
   end
 
   def test_pangram_with_underscores
-    skip
     phrase = 'the_quick_brown_fox_jumps_over_the_lazy_dog'
     result = Pangram.pangram?(phrase)
     assert result, "Expected true, got: #{result.inspect}. #{phrase.inspect} IS a pangram"
   end
 
   def test_pangram_with_numbers
-    skip
     phrase = 'the 1 quick brown fox jumps over the 2 lazy dogs'
     result = Pangram.pangram?(phrase)
     assert result, "Expected true, got: #{result.inspect}. #{phrase.inspect} IS a pangram"
   end
 
   def test_missing_letters_replaced_by_numbers
-    skip
     phrase = '7h3 qu1ck brown fox jumps ov3r 7h3 lazy dog'
     result = Pangram.pangram?(phrase)
     refute result, "Expected false, got: #{result.inspect}. #{phrase.inspect} is NOT a pangram"
   end
 
   def test_pangram_with_mixed_case_and_punctuation
-    skip
     phrase = '"Five quacking Zephyrs jolt my wax bed."'
     result = Pangram.pangram?(phrase)
     assert result, "Expected true, got: #{result.inspect}. #{phrase.inspect} IS a pangram"
