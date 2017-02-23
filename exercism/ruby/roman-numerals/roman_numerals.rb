@@ -29,3 +29,7 @@ class RomanNumerals
     end
   end
 end
+
+module BookKeeping
+  VERSION = 2
+end
