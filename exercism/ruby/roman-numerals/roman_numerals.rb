@@ -1,5 +1,7 @@
 class Fixnum
+  ONES = %w(nil I II)
+
   def to_roman
-    "I"
+    ONES[self]
   end
 end
