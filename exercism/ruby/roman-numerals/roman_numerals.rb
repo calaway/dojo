@@ -1,4 +1,10 @@
 class Fixnum
+  def to_roman
+    RomanNumerals.convert(self)
+  end
+end
+
+class RomanNumerals
   ROMAN_NUMERALS = [
     ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"],
     ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"],
@@ -6,12 +12,19 @@ class Fixnum
     ["", "M", "MM", "MMM"]
   ]
 
-  def to_roman
-    digits = self.to_s.chars.reverse
-    roman_digits = digits.map.with_index do |digit, index|
+  def self.convert(number)
+    concatenate_roman_digits(roman_digits(number))
+  end
+
+  def self.roman_digits(number)
+    digits = number.to_s.chars.reverse
+    digits.map.with_index do |digit, index|
       ROMAN_NUMERALS[index][digit.to_i]
     end.reverse
-    roman_digits.inject("") do |roman_numeral, roman_digit|
+  end
+
+  def self.concatenate_roman_digits(roman_digits)
+    roman_digits.reduce("") do |roman_numeral, roman_digit|
       roman_numeral += roman_digit
     end
   end
