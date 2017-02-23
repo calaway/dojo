@@ -6,9 +6,11 @@ class Sieve
   def primes
     index = 0
     while index < @numbers.length do
-      @numbers = @numbers[0..index] + @numbers[index+1..-1].delete_if do |number|
+      former = @numbers[0..index]
+      latter = @numbers[index+1..-1].delete_if do |number|
         number % @numbers[index] == 0
       end
+      @numbers = former + latter
       index += 1
     end
     @numbers
