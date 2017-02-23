@@ -18,4 +18,8 @@ class Squares
       sum += number ** 2
     end
   end
+
+  def difference
+    0
+  end
 end
