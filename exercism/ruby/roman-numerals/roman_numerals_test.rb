@@ -64,17 +64,14 @@ class RomanNumeralsTest < Minitest::Test
   end
 
   def test_575
-    skip
     assert_equal 'DLXXV', 575.to_roman
   end
 
   def test_911
-    skip
     assert_equal 'CMXI', 911.to_roman
   end
 
   def test_1024
-    skip
     assert_equal 'MXXIV', 1024.to_roman
   end
 
