@@ -6,3 +6,7 @@ class Pangram
     end
   end
 end
+
+module BookKeeping
+  VERSION = 4
+end
