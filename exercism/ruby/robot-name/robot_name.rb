@@ -9,10 +9,18 @@ class Robot
 
   def generate_name
     srand
-    (ALPHABET[rand(26)] * 2) + ((rand(10).to_s) * 3)
+    ALPHABET[rand(26)] +
+      ALPHABET[rand(26)] +
+      rand(10).to_s +
+      rand(10).to_s +
+      rand(10).to_s
   end
 
   def reset
     @name = generate_name
   end
+end
+
+module BookKeeping
+  VERSION = 2
 end
