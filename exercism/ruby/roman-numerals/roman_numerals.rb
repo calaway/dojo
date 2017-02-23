@@ -1,5 +1,6 @@
 class Fixnum
-  ROMAN_NUMERALS = [%w(nil I II III IV V VI VII VIII IX)]
+  ROMAN_NUMERALS = [%w(nil I II III IV V VI VII VIII IX),
+                    %w(nil X XX XXX XL L LX LXX LXXX XL)]
 
   def to_roman
     digits = self.to_s.chars.reverse
