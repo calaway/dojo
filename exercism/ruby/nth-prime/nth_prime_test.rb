@@ -12,12 +12,10 @@ class NthPrimeTest < Minitest::Test
   end
 
   def test_second_prime
-    skip
     assert_equal 3, Prime.nth(2)
   end
 
   def test_sixth_prime
-    skip
     assert_equal 13, Prime.nth(6)
   end
 
