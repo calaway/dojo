@@ -14,6 +14,8 @@ class Squares
   end
 
   def sum_of_squares
-    55
+    (1..terminus).reduce(0) do |sum, number|
+      sum += number ** 2
+    end
   end
 end
