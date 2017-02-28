@@ -1,9 +1,10 @@
 class Prime
   def self.nth(n)
+    validate_input(n)
     prime = 2
     count = 1
     trial_prime = 3
-    while count != n do
+    while count < n do
       if is_prime?(trial_prime)
         prime = trial_prime
         count += 1
@@ -11,6 +12,10 @@ class Prime
       trial_prime += 2
     end
     prime
+  end
+
+  def self.validate_input(input)
+    raise ArgumentError unless input.class == Fixnum && input > 0
   end
 
   def self.is_prime?(trial_prime)

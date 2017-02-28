@@ -24,7 +24,6 @@ class NthPrimeTest < Minitest::Test
   end
 
   def test_there_is_no_zeroth_prime
-    skip
     assert_raises(ArgumentError) { Prime.nth(0) }
   end
 
