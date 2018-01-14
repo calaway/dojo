@@ -1,0 +1,7 @@
+AllCops:
+  DisplayCopNames: true
+  Exclude:
+    - '**/*_test.rb'
+
+Style/Documentation:
+  Enabled: false

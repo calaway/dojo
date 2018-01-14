@@ -1,4 +1,4 @@
-class Fixnum
+class Integer
   def to_roman
     RomanNumerals.convert(self)
   end
@@ -6,11 +6,11 @@ end
 
 class RomanNumerals
   ROMAN_NUMERALS = [
-    ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"],
-    ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"],
-    ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"],
-    ["", "M", "MM", "MMM"]
-  ]
+    ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'],
+    ['', 'X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC'],
+    ['', 'C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'CM'],
+    ['', 'M', 'MM', 'MMM']
+  ].freeze
 
   def self.convert(number)
     concatenate_roman_digits(roman_digits(number))
@@ -24,7 +24,7 @@ class RomanNumerals
   end
 
   def self.concatenate_roman_digits(roman_digits)
-    roman_digits.reduce("") do |roman_numeral, roman_digit|
+    roman_digits.reduce('') do |roman_numeral, roman_digit|
       roman_numeral += roman_digit
     end
   end

@@ -5,14 +5,14 @@ class Prime
   end
 
   def self.validate_input(input)
-    raise ArgumentError unless input.class == Fixnum && input > 0
+    raise ArgumentError unless input.class == Integer && input > 0
   end
 
   def self.find_nth_prime(n)
     prime = 2
     count = 1
     trial_prime = 3
-    while count < n do
+    while count < n
       if is_prime?(trial_prime)
         prime = trial_prime
         count += 1

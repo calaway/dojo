@@ -1,7 +1,7 @@
 class Robot
   attr_reader :name
 
-  ALPHABET = [*"A".."Z"]
+  ALPHABET = [*'A'..'Z']
 
   def initialize
     reset

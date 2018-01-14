@@ -10,12 +10,12 @@ class Squares
   end
 
   def square_of_sum
-    (sum_one_through_n(terminus)) ** 2
+    sum_one_through_n(terminus)**2
   end
 
   def sum_of_squares
     (1..terminus).reduce(0) do |sum, number|
-      sum += number ** 2
+      sum += number**2
     end
   end
 

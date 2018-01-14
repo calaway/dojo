@@ -1,6 +1,6 @@
 class Gigasecond
   def self.from(birth)
-    birth + (10 ** 9)
+    birth + (10**9)
   end
 end
 
