@@ -3,6 +3,9 @@ AllCops:
   Exclude:
     - '**/*_test.rb'
 
+Metrics/LineLength:
+  Max: 100
+
 Metrics/MethodLength:
   Exclude:
     - 'nth-prime/nth_prime.rb'
