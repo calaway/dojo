@@ -3,5 +3,12 @@ AllCops:
   Exclude:
     - '**/*_test.rb'
 
+Metrics/MethodLength:
+  Exclude:
+    - 'nth-prime/nth_prime.rb'
+
 Style/Documentation:
+  Enabled: false
+
+Style/NumericPredicate:
   Enabled: false

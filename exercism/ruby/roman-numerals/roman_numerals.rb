@@ -25,7 +25,7 @@ class RomanNumerals
 
   def self.concatenate_roman_digits(roman_digits)
     roman_digits.reduce('') do |roman_numeral, roman_digit|
-      roman_numeral += roman_digit
+      roman_numeral + roman_digit
     end
   end
 end
