@@ -5,11 +5,12 @@ class Phrase
     @phrase = phrase
   end
 
+  def words
+    phrase.scan(/\b[\w']+\b/)
+  end
+
   def word_count
-    phrase_without_quotes = phrase.gsub(/'\w+'/) do |match|
-      match[1..-2]
-    end
-    phrase_without_quotes.split(/[^\w\d']+/).each_with_object(Hash.new(0)) do |word, counts|
+    words.each_with_object(Hash.new(0)) do |word, counts|
       counts[word.downcase] += 1
     end
   end
