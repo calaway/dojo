@@ -40,7 +40,6 @@ class PhoneNumberTest < Minitest::Test
   end
 
   def test_invalid_with_punctuations
-    skip
     assert_nil PhoneNumber.clean("123-@:!-7890")
   end
 
