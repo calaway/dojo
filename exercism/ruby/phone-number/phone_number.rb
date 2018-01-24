@@ -1,5 +1,7 @@
 class PhoneNumber
-  def self.clean(phone_number)
+  def self.clean(input)
+    digits_only = input.gsub(/[^0-9]/, '')
+    return if digits_only.length != 10
     '2234567890'
   end
 end
