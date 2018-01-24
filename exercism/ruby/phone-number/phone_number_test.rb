@@ -48,7 +48,6 @@ class PhoneNumberTest < Minitest::Test
   end
 
   def test_invalid_if_exchange_code_does_not_start_with_2_9
-    skip
     assert_nil PhoneNumber.clean("(223) 056-7890")
   end
 

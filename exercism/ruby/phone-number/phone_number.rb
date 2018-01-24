@@ -4,6 +4,7 @@ class PhoneNumber
     phone_number = phone_number[1..-1] if phone_number.length > 10 && phone_number[0] == '1'
     return if phone_number.length != 10
     return if ('0'..'1').cover?(phone_number[0])
+    return if ('0'..'1').cover?(phone_number[3])
     '2234567890'
   end
 end
