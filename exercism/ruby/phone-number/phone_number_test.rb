@@ -4,7 +4,6 @@ require_relative 'phone_number'
 # Common test data version: 1.2.0 39cba0d
 class PhoneNumberTest < Minitest::Test
   def test_cleans_the_number
-    skip
     assert_equal "2234567890", PhoneNumber.clean("(223) 456-7890")
   end
 
