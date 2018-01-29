@@ -25,7 +25,7 @@ class Clock
   end
 
   def ==(other)
-    true
+    @minute == other.instance_variable_get(:@minute)
   end
 end
 
