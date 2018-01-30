@@ -1,10 +1,14 @@
 class SpaceAge
-  def initialize(seconds)
+  attr_reader :seconds
 
+  SECONDS_PER_EARTH_YEAR = 31_557_600
+
+  def initialize(seconds)
+    @seconds = seconds
   end
 
   def on_earth
-    31.69
+    seconds / SECONDS_PER_EARTH_YEAR.to_f
   end
 
   def on_mercury
