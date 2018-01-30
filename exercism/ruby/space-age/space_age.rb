@@ -1,7 +1,14 @@
 class SpaceAge
   attr_reader :seconds
 
-  SECONDS_PER_EARTH_YEAR = 31_557_600
+  SECONDS_PER_EARTH_YEAR      = 31_557_600
+  MERCURY_EARTH_ORBITAL_RATIO = 0.2408467
+  VENUS_EARTH_ORBITAL_RATIO   = 0.61519726
+  MARS_EARTH_ORBITAL_RATIO    = 1.8808158
+  JUPITER_EARTH_ORBITAL_RATIO = 11.862615
+  SATURN_EARTH_ORBITAL_RATIO  = 29.447498
+  URANUS_EARTH_ORBITAL_RATIO  = 84.016846
+  NEPTUNE_EARTH_ORBITAL_RATIO = 164.79132
 
   def initialize(seconds)
     @seconds = seconds
@@ -12,33 +19,32 @@ class SpaceAge
   end
 
   def on_mercury
-    280.88
+    on_earth / MERCURY_EARTH_ORBITAL_RATIO
   end
 
   def on_venus
-    9.78
+    on_earth / VENUS_EARTH_ORBITAL_RATIO
   end
 
   def on_mars
-    39.25
+    on_earth / MARS_EARTH_ORBITAL_RATIO
   end
 
   def on_jupiter
-    2.41
+    on_earth / JUPITER_EARTH_ORBITAL_RATIO
   end
 
   def on_saturn
-    3.23
+    on_earth / SATURN_EARTH_ORBITAL_RATIO
   end
 
   def on_uranus
-    1.21
+    on_earth / URANUS_EARTH_ORBITAL_RATIO
   end
 
   def on_neptune
-    1.58
+    on_earth / NEPTUNE_EARTH_ORBITAL_RATIO
   end
-
 end
 
 module BookKeeping
