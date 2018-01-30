@@ -25,7 +25,7 @@ class Clock
   end
 
   def ==(other)
-    @hour == other.instance_variable_get(:@hour) && @minute == other.instance_variable_get(:@minute)
+    to_s == other.to_s
   end
 end
 
