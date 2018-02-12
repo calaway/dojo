@@ -1,12 +1,15 @@
 class Game
-  attr_reader :score
-
   def initialize
     @frame = 1
     @first_roll = true
     @previous_pins1 = 0
     @previous_pins2 = 0
     @score = 0
+  end
+
+  def score
+    raise Game::BowlingError if @frame < 11
+    @score
   end
 
   def roll(pins)
