@@ -23,11 +23,11 @@ class Game
               end
     @previous_pins2 = @previous_pins1
     @previous_pins1 = pins
-    increment_frame
+    increment_frame(pins)
   end
 
-  def increment_frame
-    if @first_roll
+  def increment_frame(pins)
+    if @first_roll && pins != 10
       @first_roll = false
     else
       @frame += 1
