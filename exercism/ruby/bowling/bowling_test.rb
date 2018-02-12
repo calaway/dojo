@@ -96,7 +96,6 @@ class BowlingTest < Minitest::Test
   end
 
   def test_two_rolls_in_a_frame_cannot_score_more_than_10_points
-    skip
     record([5])
     assert_raises Game::BowlingError do
       @game.roll(6)
