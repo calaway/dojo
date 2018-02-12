@@ -12,6 +12,8 @@ class Game
   def roll(pins)
     @score += if @frame > 10
                 pins
+              elsif @previous_pins1 == 10 && @previous_pins2 == 10
+                3 * pins
               elsif @previous_pins1 == 10 || @previous_pins2 == 10
                 2 * pins
               elsif @previous_pins1 + @previous_pins2 == 10

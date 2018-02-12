@@ -52,7 +52,6 @@ class BowlingTest < Minitest::Test
   end
 
   def test_consecutive_strikes_each_get_the_two_roll_bonus
-    skip
     record([10, 10, 10, 5, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
     assert_equal 81, @game.score
   end
