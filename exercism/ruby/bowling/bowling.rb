@@ -10,6 +10,7 @@ class Game
   end
 
   def roll(pins)
+    validate_roll(pins)
     @score += if @frame == 11 && @first_roll && @previous_pins2 == 10
                 2 * pins
               elsif @frame > 10
@@ -36,6 +37,13 @@ class Game
       @first_roll = true
     end
   end
+
+  def validate_roll(pins)
+    raise Game::BowlingError if pins < 0
+  end
+end
+
+class Game::BowlingError < StandardError
 end
 
 module BookKeeping
