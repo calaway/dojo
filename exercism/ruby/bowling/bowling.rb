@@ -2,7 +2,7 @@ class Game
   attr_reader :score
 
   def initialize
-    @frame = 0
+    @frame = 1
     @first_roll = true
     @previous_pins1 = 0
     @previous_pins2 = 0
@@ -10,7 +10,11 @@ class Game
   end
 
   def roll(pins)
-    @score += if (@frame < 10) && (@previous_pins1 + @previous_pins2 == 10)
+    @score += if @frame > 10
+                pins
+              elsif @previous_pins1 == 10 || @previous_pins2 == 10
+                2 * pins
+              elsif @previous_pins1 + @previous_pins2 == 10
                 2 * pins
               else
                 pins
