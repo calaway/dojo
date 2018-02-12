@@ -39,7 +39,7 @@ class Game
   end
 
   def validate_roll(pins)
-    raise Game::BowlingError if pins < 0
+    raise Game::BowlingError unless (0..10).cover?(pins)
   end
 end
 
