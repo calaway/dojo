@@ -13,7 +13,11 @@ class Allergies
   end
 
   def list
-    []
+    memo = []
+    ALLERGENS.zip(score.digits(2)) do |allergen, bool|
+      memo << allergen if bool == 1
+    end
+    memo
   end
 end
 
