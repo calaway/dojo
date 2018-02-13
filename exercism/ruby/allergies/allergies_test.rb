@@ -4,7 +4,6 @@ require_relative 'allergies'
 # Common test data version: 1.0.0 879bc89
 class AllergiesTest < Minitest::Test
   def test_no_allergies_means_not_allergic
-    skip
     allergies = Allergies.new(0)
     refute allergies.allergic_to?('peanuts')
     refute allergies.allergic_to?('cats')
