@@ -4,7 +4,7 @@
 //
 
 export const colorCode = () => {
-  throw new Error("Remove this statement and implement this function");
+  return 0;
 };
 
 export const COLORS = undefined;
