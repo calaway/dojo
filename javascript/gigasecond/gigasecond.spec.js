@@ -7,7 +7,7 @@ describe('Gigasecond', () => {
     expect(gs).toEqual(expectedDate);
   });
 
-  xtest('tells the anniversary is next day when you are born at night', () => {
+  test('tells the anniversary is next day when you are born at night', () => {
     const gs = gigasecond(new Date(Date.UTC(2015, 8, 14, 23, 59, 59)));
     const expectedDate = new Date(Date.UTC(2047, 4, 24, 1, 46, 39));
     expect(gs).toEqual(expectedDate);
