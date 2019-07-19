@@ -1,11 +1,8 @@
 export const toRna = (sequence) => {
-  let chars = sequence.split('');
-
-  chars = chars.map(char => {
-    return translationMap[char];
-  });
-
-  return chars.join('');
+  return sequence
+           .split('')
+           .map(char => translationMap[char])
+           .join('')
 };
 
 const translationMap = {
