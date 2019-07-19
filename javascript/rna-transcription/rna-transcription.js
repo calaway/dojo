@@ -1,11 +1,21 @@
 export const toRna = (sequence) => {
-  if (sequence === 'C') {
+  let chars = sequence.split('');
+
+  chars = chars.map(char => {
+    return translate(char);
+  });
+
+  return chars.join('');
+};
+
+function translate(char) {
+  if (char === 'C') {
     return 'G';
-  } else if (sequence === 'G') {
+  } else if (char === 'G') {
     return 'C';
-  } else if (sequence === 'T') {
+  } else if (char === 'T') {
     return 'A';
-  } else if (sequence === 'A') {
+  } else if (char === 'A') {
     return 'U';
   } else {
     return '';
