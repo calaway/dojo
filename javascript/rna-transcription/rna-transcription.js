@@ -3,6 +3,8 @@ export const toRna = (sequence) => {
     return 'G';
   } else if (sequence === 'G') {
     return 'C';
+  } else if (sequence === 'T') {
+    return 'A';
   } else {
     return '';
   }
