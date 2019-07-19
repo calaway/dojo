@@ -2,22 +2,15 @@ export const toRna = (sequence) => {
   let chars = sequence.split('');
 
   chars = chars.map(char => {
-    return translate(char);
+    return translationMap[char];
   });
 
   return chars.join('');
 };
 
-function translate(char) {
-  if (char === 'C') {
-    return 'G';
-  } else if (char === 'G') {
-    return 'C';
-  } else if (char === 'T') {
-    return 'A';
-  } else if (char === 'A') {
-    return 'U';
-  } else {
-    return '';
-  }
-};
+const translationMap = {
+  C: 'G',
+  G: 'C',
+  T: 'A',
+  A: 'U'
+}
