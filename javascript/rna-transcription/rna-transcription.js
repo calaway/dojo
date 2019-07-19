@@ -5,6 +5,8 @@ export const toRna = (sequence) => {
     return 'C';
   } else if (sequence === 'T') {
     return 'A';
+  } else if (sequence === 'A') {
+    return 'U';
   } else {
     return '';
   }
