@@ -1,3 +1,7 @@
-export const toRna = () => {
-  return '';
+export const toRna = (sequence) => {
+  if (sequence === 'C') {
+    return 'G';
+  } else {
+    return '';
+  }
 };
