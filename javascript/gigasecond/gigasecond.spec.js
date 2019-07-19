@@ -13,7 +13,7 @@ describe('Gigasecond', () => {
     expect(gs).toEqual(expectedDate);
   });
 
-  xtest('even works before 1970 (beginning of Unix epoch)', () => {
+  test('even works before 1970 (beginning of Unix epoch)', () => {
     const gs = gigasecond(new Date(Date.UTC(1959, 6, 19, 5, 13, 45)));
     const expectedDate = new Date(Date.UTC(1991, 2, 27, 7, 0, 25));
     expect(gs).toEqual(expectedDate);
