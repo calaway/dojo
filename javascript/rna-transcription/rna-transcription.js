@@ -1,10 +1,10 @@
-export const toRna = (sequence) => {
-  return sequence.replace(/./g, (nucleobase) => {
-    return {
+export const toRna = (sequence) => (
+  sequence.replace(/./g, (nucleobase) => (
+    {
       C: 'G',
       G: 'C',
       T: 'A',
       A: 'U'
-    }[nucleobase];
-  })
-};
+    }[nucleobase]
+  ))
+);
