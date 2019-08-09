@@ -1,13 +1,10 @@
 export const toRna = (sequence) => {
-  return sequence
-           .split('')
-           .map(char => translationMap[char])
-           .join('')
+  return sequence.replace(/./g, (nucleobase) => {
+    return {
+      C: 'G',
+      G: 'C',
+      T: 'A',
+      A: 'U'
+    }[nucleobase];
+  })
 };
-
-const translationMap = {
-  C: 'G',
-  G: 'C',
-  T: 'A',
-  A: 'U'
-}
