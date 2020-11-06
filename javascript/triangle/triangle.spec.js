@@ -86,7 +86,7 @@ describe('Triangle', () => {
       expect(triangle.isScalene()).toBe(false);
     });
 
-    xtest('two sides are equal', () => {
+    test('two sides are equal', () => {
       const triangle = new Triangle(4, 4, 3);
       expect(triangle.isScalene()).toBe(false);
     });
