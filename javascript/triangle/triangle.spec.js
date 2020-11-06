@@ -22,14 +22,14 @@ describe('Triangle', () => {
       expect(triangle.isEquilateral()).toBe(false);
     });
 
-    xtest('sides may be floats', () => {
+    test('sides may be floats', () => {
       const triangle = new Triangle(0.5, 0.5, 0.5);
       expect(triangle.isEquilateral()).toBe(true);
     });
   });
 
   describe('isosceles triangle', () => {
-    xtest('last two sides are equal', () => {
+    test('last two sides are equal', () => {
       const triangle = new Triangle(3, 4, 4);
       expect(triangle.isIsosceles()).toBe(true);
     });
