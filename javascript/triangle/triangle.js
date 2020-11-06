@@ -14,7 +14,11 @@ export class Triangle {
   }
 
   isIsosceles() {
-    return true;
+    if (this.a === this.b || this.b === this.c || this.c === this.a) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   isScalene() {

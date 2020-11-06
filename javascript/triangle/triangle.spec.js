@@ -34,22 +34,22 @@ describe('Triangle', () => {
       expect(triangle.isIsosceles()).toBe(true);
     });
 
-    xtest('first two sides are equal', () => {
+    test('first two sides are equal', () => {
       const triangle = new Triangle(4, 4, 3);
       expect(triangle.isIsosceles()).toBe(true);
     });
 
-    xtest('first and last sides are equal', () => {
+    test('first and last sides are equal', () => {
       const triangle = new Triangle(4, 3, 4);
       expect(triangle.isIsosceles()).toBe(true);
     });
 
-    xtest('equilateral triangles are also isosceles', () => {
+    test('equilateral triangles are also isosceles', () => {
       const triangle = new Triangle(4, 4, 4);
       expect(triangle.isIsosceles()).toBe(true);
     });
 
-    xtest('no sides are equal', () => {
+    test('no sides are equal', () => {
       const triangle = new Triangle(2, 3, 4);
       expect(triangle.isIsosceles()).toBe(false);
     });
