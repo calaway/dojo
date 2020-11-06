@@ -96,7 +96,7 @@ describe('Triangle', () => {
       expect(triangle.isScalene()).toBe(false);
     });
 
-    xtest('sides may be floats', () => {
+    test('sides may be floats', () => {
       const triangle = new Triangle(0.5, 0.4, 0.6);
       expect(triangle.isScalene()).toBe(true);
     });
