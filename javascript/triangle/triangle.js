@@ -14,7 +14,7 @@ export class Triangle {
   }
 
   isIsosceles() {
-    if (this.a + this.b < this.c) {
+    if (this.a + this.b < this.c || this.c + this.a < this.b) {
       return false;
     } else if (this.a === this.b || this.b === this.c || this.c === this.a) {
       return true;
