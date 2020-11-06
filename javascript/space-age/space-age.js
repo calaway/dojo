@@ -11,7 +11,11 @@ export const age = (planet, ageInSeconds) => {
     saturn: 29.447498,
     uranus: 84.016846,
     neptune: 164.79132,
-  }
+  };
 
-  return Math.round((earthYears / orbitalRatio[planet]) * 100) / 100;
+  return roundToTwoDecimals(earthYears / orbitalRatio[planet]);
+};
+
+const roundToTwoDecimals = (number) => {
+  return Math.round(number * 100) / 100
 };
