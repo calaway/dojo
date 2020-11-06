@@ -1,6 +1,6 @@
 export const age = (planet, ageInSeconds) => {
   const secondsPerDay = 31557600;
-  const earthYears = Math.round((ageInSeconds / secondsPerDay) * 100) / 100;
+  const earthYears = ageInSeconds / secondsPerDay;
 
   const orbitalRatio = {
     earth: 1,
