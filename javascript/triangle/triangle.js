@@ -8,6 +8,8 @@ export class Triangle {
   isEquilateral() {
     if (this.a === this.b && this.b === this.c) {
       return true
+    } else {
+      return false
     }
   }
 
