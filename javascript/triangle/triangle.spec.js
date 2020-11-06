@@ -12,12 +12,12 @@ describe('Triangle', () => {
       expect(triangle.isEquilateral()).toBe(false);
     });
 
-    xtest('no sides are equal', () => {
+    test('no sides are equal', () => {
       const triangle = new Triangle(5, 4, 6);
       expect(triangle.isEquilateral()).toBe(false);
     });
 
-    xtest('all zero sides is not a triangle', () => {
+    test('all zero sides is not a triangle', () => {
       const triangle = new Triangle(0, 0, 0);
       expect(triangle.isEquilateral()).toBe(false);
     });

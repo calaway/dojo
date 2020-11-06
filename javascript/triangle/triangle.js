@@ -6,7 +6,7 @@ export class Triangle {
   }
 
   isEquilateral() {
-    if (this.a === this.b && this.b === this.c) {
+    if (this.a !== 0 && this.a === this.b && this.b === this.c) {
       return true
     } else {
       return false
