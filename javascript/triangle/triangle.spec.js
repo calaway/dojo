@@ -91,7 +91,7 @@ describe('Triangle', () => {
       expect(triangle.isScalene()).toBe(false);
     });
 
-    xtest('may not violate triangle inequality', () => {
+    test('may not violate triangle inequality', () => {
       const triangle = new Triangle(7, 3, 2);
       expect(triangle.isScalene()).toBe(false);
     });

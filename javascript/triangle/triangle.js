@@ -24,7 +24,9 @@ export class Triangle {
   }
 
   isScalene() {
-    if (this.a === this.b || this.b === this.c || this.c === this.a) {
+    if (this.a + this.b < this.c || this.b + this.c < this.a || this.c + this.a < this.b) {
+      return false;
+    } else if (this.a === this.b || this.b === this.c || this.c === this.a) {
       return false;
     } else {
       return true;
