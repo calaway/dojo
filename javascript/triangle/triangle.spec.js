@@ -69,14 +69,14 @@ describe('Triangle', () => {
       expect(triangle.isIsosceles()).toBe(false);
     });
 
-    xtest('sides may be floats', () => {
+    test('sides may be floats', () => {
       const triangle = new Triangle(0.5, 0.4, 0.5);
       expect(triangle.isIsosceles()).toBe(true);
     });
   });
 
   describe('scalene triangle', () => {
-    xtest('no sides are equal', () => {
+    test('no sides are equal', () => {
       const triangle = new Triangle(5, 4, 6);
       expect(triangle.isScalene()).toBe(true);
     });
